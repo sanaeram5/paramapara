@@ -1,217 +1,107 @@
-import { Container } from "./styles";
-// import githubIcon from "../../assets/github.svg"
-// import DownloadApp from '../../assets/download.png'
-import externalLink from "../../assets/external-link.svg"
-import ScrollAnimation from "react-animate-on-scroll";
+import React from 'react';
+import styled from 'styled-components';
+import Product1 from '../../assets/product1.png';
+import Product2 from '../../assets/product2.png';
 
+
+// Styled component for the section container
+const SectionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+// Styled component for the product container
+const ProductContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px; /* Added padding */
+  margin: 0 auto; /* Center the container */
+`;
+
+// Styled component for the product card
+const ProductCard = styled.div`
+  width: calc(50% - 40px); /* Adjusted width to accommodate spacing */
+  background-color: #f9f9f9; /* Base color of the cards */
+  padding: 20px;
+  margin-bottom: 20px; /* Added margin between cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+`;
+
+// Styled component for the product image
+const ProductImage = styled.img`
+  width: 50%;
+  border-radius: 5px;
+`;
+
+// Styled component for the product content
+const ProductContent = styled.div`
+  width: 50%;
+  padding-left: 20px;
+`;
+
+// Styled component for the product title
+const ProductTitle = styled.h3`
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+`;
+
+// Styled component for the product description
+const ProductDescription = styled.p`
+  font-size: 1rem;
+  color: #666;
+`;
+
+// Styled component for the learn more button
+const LearnMoreButton = styled.button`
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+`;
+
+const ProductBanner = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+`;
 
 export function Project() {
   return (
-    <Container id="project">
-      <h2>My Projects</h2>
-      <div className="projects">
-
-  
-
-      <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://kameleon.co.in/" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>Kameleon - Cloth Selling Site</h3>
-              <p>
-              This website sells men's cloth products and helps men look their best. It is easy to find what you need, whether it's cloth shirts, pants, or accessories. The site is useful for men who want to look their best and need some help.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Shopify</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://madewithluv.in/" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>MadeWithLuv - HomeDecor Site</h3>
-              <p>
-              This website sells home decor products and helps people decorate their homes. It is easy to find what you need, whether it's furniture or decorations. The site is useful for people who want to make their homes look nice and need some help.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Wordpress</li>
-                <li>Woocommerce</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://justmedicalbooks.com/" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>MedicalBooks - Book Selling Site</h3>
-              <p>
-              This website sells medical books online and is popular with medical students. Medical students use it to buy books and acquire knowledge. The site has all kinds of medical books in one place.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Wordpress</li>
-                <li>Woocommerce</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-
-        {/* <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://www.smartcornersproperties.com/" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>SmartCorners - Real Estate Properties Site</h3>
-              <p>
-              This real estate site displays land properties and helps buyers and sellers. Buyers can see lots of pictures, videos, and details about properties before visiting in person. It makes it easier for buyers to find what they want and helps sellers get more attention.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Wordpress</li>               
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation> */}
-
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://drrohitdamor.com" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>Dr.Rohit Damor - Online Appointment Booking Site</h3>
-              <p>
-              This website allows people to easily book appointments with you online. It takes just a minute to schedule a meeting. This kind of site is helpful for booking appointments and not missing any potential clients. You should try this website to see how convenient and efficient it is.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Wordpress</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://velocityai.vinayaksingh.com/" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>VeloCityAI</h3>
-              <p>
-              VelocityAI is a website that allows users to get instant answers to any question and generate stunning AI pictures using OpenAI's GPT-3 and DALL-E model.With VelocityAI, users can type in text-based prompts and receive a corresponding response.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>React</li>
-                <li>Typescript</li>
-                <li>Html</li>
-                <li>css</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-
-        {/* <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://mitulindustries.com/" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>Mitul Industries - Manufacturing Industries Site</h3>
-              <p>
-              This manufacturing industry website shows off products and helps the business get more customers and information online. Making products is important but making money from them is the goal. This site can help the business make more profit.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Wordpress</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation> */}
-
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://mayatmaj.com/" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>Mayatmaj - Film Production Site</h3>
-              <p>
-              This agency website promotes post production, virtual production, and video marketing services. It shows previous client work and reviews to get more business. If you need help with production, this website can give you information and connect you with the right people.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Wordpress</li>              
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-       
-
-      </div>
-    </Container>
+    <SectionContainer>
+      <ProductContainer>
+        <ProductCard>
+          <ProductImage src={Product1} alt="Parampara Kachhi Ghani Mustard Oil" />
+          <ProductContent>
+            <ProductTitle>Parampara Kachhi Ghani Mustard Oil</ProductTitle>
+            <ProductDescription>
+              Parampara Kachhi Ghani Mustard Oil contains Omega 3 PUFA that contributes towards maintaining normal blood
+              cholesterol levels. All our oils are fortified with Vitamins A & D, further ensuring that food cooked not
+              only tastes great, but is nutritious too.
+            </ProductDescription>
+            <LearnMoreButton>LEARN MORE</LearnMoreButton>
+          </ProductContent>
+        </ProductCard>
+        <ProductCard>
+          <ProductImage src={Product2} alt="Parampara Refined Soybean Oil" />
+          <ProductContent>
+            <ProductTitle>Parampara Refined Soybean Oil</ProductTitle>
+            <ProductDescription>
+              Parampara Refined Soybean Oil contains Omega 6 PUFA & Omega 3 PUFA in a proportion that help in
+              maintaining normal blood cholesterol levels, besides tocopherols which are natural antioxidants.
+            </ProductDescription>
+            <LearnMoreButton>LEARN MORE</LearnMoreButton>
+          </ProductContent>
+        </ProductCard>
+      </ProductContainer>
+    </SectionContainer>
   );
-}
+};
